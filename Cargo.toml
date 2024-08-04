@@ -1,0 +1,19 @@
+[package]
+name = "h3_test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bytes = { version = "1.6.0" }
+futures = "0.3.30"
+h3 = { version = "0.0.6", features = ["tracing"] }
+h3-quinn = { version = "0.0.7", features = ["tracing"] }
+http = { version = "1.1.0" }
+quinn = { version = "0.11.2", default-features = false, features = ["runtime-tokio", "rustls", "ring"] }
+quinn-proto = "0.11.3"
+rustls = { version = "0.23.10", default-features = false, features = ["logging", "ring", "std"] }
+rustls-native-certs = "0.7.1"
+structopt = { version = "0.3.26" }
+tokio = { version = "1.38.0", features = ["full"] }
+tracing = { version = "0.1.40" }
+tracing-subscriber = { version = "0.3.18", features = ["fmt", "ansi", "env-filter", "time", "tracing-log"] }
